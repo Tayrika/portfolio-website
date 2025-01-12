@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function Intro() {
   return (
     // section is a semamtic html tag where every element inside is related to each other vs div
-    <section>
+    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -44,6 +44,9 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
+      <p className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl">
+        Hi, I'm Rika, a full-stack developer based in Tokyo, Japan. My focus is React and Next.js. Let's build something great together!
+      </p>
     </section>
   );
 }
