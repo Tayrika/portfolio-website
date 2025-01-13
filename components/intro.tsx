@@ -9,7 +9,7 @@ import { FaGithubSquare } from "react-icons/fa";
 export default function Intro() {
   return (
     // section is a semamtic html tag where every element inside is related to each other vs div
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <motion.h1 
         className="mb-10 mt-4 px-4 text-2xl !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
