@@ -13,7 +13,7 @@ export default function Projects() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="projects"
-      className="scroll-mt-28"
+      className="scroll-mt-28 mb-28"
     >
       <SectionHeading>Projects</SectionHeading>
       <div>
