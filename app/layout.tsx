@@ -3,6 +3,7 @@ import "./globals.css";
 import { Lora } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ThemeSwitch from "@/components/theme-switch";
 
 const inter = Lora({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ThemeSwitch />
       </body>
     </html>
   );
