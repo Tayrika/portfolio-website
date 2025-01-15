@@ -31,10 +31,17 @@ export default function Contact() {
       <form className="mt-10 flex flex-col">
         <input 
           className="h-14 px-4 rounded-lg borderBlack text-gray-900" 
-          type="email" 
+          type="email"
+          required
+          maxLength={500}
           placeholder="Your email"
         />
-        <textarea className="h-52 my-3 rounded-lg borderBlack p-4" placeholder="Your message" />
+        <textarea 
+          className="h-52 my-3 rounded-lg borderBlack p-4" 
+          placeholder="Your message" 
+          required
+          maxLength={500}
+        />
         <button 
           type="submit"
           className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
