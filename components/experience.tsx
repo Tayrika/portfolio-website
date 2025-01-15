@@ -5,8 +5,11 @@ import SectionHeading from "./section-heading";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiencesData } from "@/lib/data";
+import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
+  const { theme } = useTheme();
+
   return (
     <section className="scroll-mt-28 mb-28 sm:mb-40" id="experience">
       <SectionHeading>Experience</SectionHeading>
@@ -15,7 +18,7 @@ export default function Experience() {
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle = {{
-                background: '#f3f4f6',
+                background: theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0,0,0,0.05)",
                 textAlign: "left",
