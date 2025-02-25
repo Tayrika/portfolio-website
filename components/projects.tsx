@@ -17,13 +17,9 @@ export default function Projects() {
     >
       <SectionHeading>Projects</SectionHeading>
       <div>
-        {
-          projectsData.map((project, index) => (
-            <React.Fragment key={index}>
-              <Project {...project} />
-            </React.Fragment>
-          ))
-        }
+        {projectsData.map((project, index) => (
+          <Project key={project.title} {...project} index={index} />
+        ))}
       </div>
     </motion.section>
   );
