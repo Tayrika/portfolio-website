@@ -2,7 +2,7 @@
 
 import React from "react"
 import { motion } from "framer-motion";
-import Link from "next/link";
+// import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 
