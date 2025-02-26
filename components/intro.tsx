@@ -27,15 +27,14 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link 
-        href="#contact"
-        className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+        <div
+        className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none"
         // onClick={() => {
         //   setActiveSection("Contact");
         // }}
         >
-          Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
+          Connect me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+        </div>
 
         <a className="bg-white/60 p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60" href="https://www.linkedin.com/in/rika-miyata-4bab99243/" target="_blank">
           <BsLinkedin />

@@ -11,6 +11,9 @@ const inter = Lora({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Rika | Portfolio Website",
   description: "Portfolio website as a full-stack developer",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
