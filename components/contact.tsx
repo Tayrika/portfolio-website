@@ -4,6 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { sendEmail } from "@/actions/sendEmail";
 
 export default function Contact() {
   return (
@@ -28,16 +29,23 @@ export default function Contact() {
         Please contact me directly at <a className="underline" href="mailto:rikamyt7@gmail.com">rikamyt7@gmail.com</a> or through this form.
       </p>
 
-      <form className="mt-10 flex flex-col dark:text-black">
+      <form 
+        className="mt-10 flex flex-col dark:text-black"
+        action={async (formData) => {
+          await sendEmail(formData);
+        }}  
+      >
         <input 
-          className="h-14 px-4 rounded-lg borderBlack text-gray-900 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none" 
+          className="h-14 px-4 rounded-lg borderBlack text-gray-900 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          name="senderEmail" 
           type="email"
           required
           maxLength={500}
           placeholder="Your email"
         />
         <textarea 
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none" 
+          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          name="message"
           placeholder="Your message" 
           required
           maxLength={500}
