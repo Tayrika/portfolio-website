@@ -33,6 +33,7 @@ export const projectsData = [
       "A platform for animal shelters that allows users to browse and adopt pets.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "DaisyUI"],
     imageUrl: animalshelter,
+    projectLink: "https://v53-tier3-team-40.onrender.com"
   },
   {
     title: "The Space Discovery App",
@@ -40,6 +41,7 @@ export const projectsData = [
       "An interactive platform that allows users to explore space through NASA's curated images, live ISS tracking, Mars Rover photos, and educational game activities.",
     tags: ["React", "Tailwind CSS", "NASA API"],
     imageUrl: spacediscovery,
+    projectLink: "https://v52-tier3-team-40.onrender.com"
   },
   {
     title: "GeoDash World",
@@ -47,6 +49,7 @@ export const projectsData = [
       "An interactive geographical area learning app that enables users to learn the neighborhoods, streets, and landmarks in major cities through creative game activities.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Google Maps API"],
     imageUrl: geodashworld,
+    projectLink: "https://geodash-world-client.onrender.com"
   },
   {
     title: "Happy Beats",
@@ -54,6 +57,7 @@ export const projectsData = [
       "A music player app that plays random upbeat jazz music.",
     tags: ["React", "JavaScript"],
     imageUrl: happybeats,
+    projectLink: ""
   },
 ] as const;
 

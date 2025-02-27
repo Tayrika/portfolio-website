@@ -5,8 +5,12 @@ import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-type ProjectProps = (typeof projectsData)[number] & { index: number };
+type ProjectProps = (typeof projectsData)[number] & { 
+  index: number;
+  projectLink?: string; // Make it optional to maintain compatibility
+};
 
 export default function Project({
   title,
@@ -14,6 +18,7 @@ export default function Project({
   tags,
   imageUrl,
   index,
+  projectLink,
 }: ProjectProps) {
 
   const ref = useRef<HTMLDivElement>(null);
@@ -26,6 +31,40 @@ export default function Project({
 
   const isEven = index % 2 === 0;
 
+  const content = (
+    <section
+      ref={ref}
+      className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-odd:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
+    >
+      <div className={`py-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
+        isEven ? "sm:ml-[18rem]" : ""
+      }`}>
+        <h3 className="text-2xl font-semibold">{title}</h3>
+        <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
+        <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          {tags.map((tag, index) => (
+            <li
+              className="bg-gray-700 px-3 py-1 text-[0.7rem] font-sans font-medium uppercase tracking-wider text-white rounded-full dark:text-white/80 dark:bg-gray-900"
+              key={index}
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Image
+        src={imageUrl}
+        alt={title}
+        quality={95}
+        className={`absolute hidden sm:block top-8 w-[28.25rem] rounded-t-lg shadow-2xl transition 
+          ${isEven 
+            ? "-left-40 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:rotate-2"
+            : "-right-40 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:rotate-2"
+          }`}
+      />
+    </section>
+  );
+
   return (
     <motion.div
       style={{
@@ -34,37 +73,16 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section
-        ref={ref}
-        className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-odd:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
-      >
-        <div className={`py-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
-          isEven ? "sm:ml-[18rem]" : ""
-        }`}>
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-gray-700 px-3 py-1 text-[0.7rem] font-sans font-medium uppercase tracking-wider text-white rounded-full dark:text-white/80 dark:bg-gray-900"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Image
-          src={imageUrl}
-          alt={title}
-          quality={95}
-          className={`absolute hidden sm:block top-8 w-[28.25rem] rounded-t-lg shadow-2xl transition 
-            ${isEven 
-              ? "-left-40 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:rotate-2"
-              : "-right-40 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:rotate-2"
-            }`}
-        />
-      </section>
+      {projectLink ? (
+        <Link 
+          href={projectLink}
+          target="_blank"
+        >
+          {content}
+        </Link>
+      ) : (
+        content
+      )}
     </motion.div>
   );
 }
