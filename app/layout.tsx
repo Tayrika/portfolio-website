@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Rika | Portfolio Website",
   description: "Portfolio website as a full-stack developer",
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 };
 
