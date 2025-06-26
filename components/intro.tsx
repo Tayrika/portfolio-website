@@ -16,7 +16,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span>Hello, I&apos;m Rika, a full-stack developer based in Tokyo, Japan. My focus is React and Next.js. Let&apos;s build something great together!</span>
+        <span>I&apos;m Rika, a Software Developer based in Tokyo, Japan. My focus is React and Next.js. Let&apos;s build something great together!</span>
       </motion.h1>
 
       <motion.div 

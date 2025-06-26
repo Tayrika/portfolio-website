@@ -1,7 +1,7 @@
 import animalshelter from "@/public/animalshelter.png";
 import spacediscovery from "@/public/spacediscovery.png";
 import geodashworld from "@/public/geodashworld.png";
-import happybeats from "@/public/happybeats.png";
+import animalworld from "@/public/animalworld.png";
 
 export const links = [
   {
@@ -28,6 +28,14 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "Animal World App",
+    description:
+      "Website for children to learn about animals through games and quizzes.",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    imageUrl: animalworld,
+    projectLink: "https://v54-tier3-team-36.netlify.app/"
+  },
+  {
     title: "The Animal Shelter App",
     description:
       "A platform for animal shelters that allows users to browse and adopt pets.",
@@ -51,14 +59,6 @@ export const projectsData = [
     imageUrl: geodashworld,
     projectLink: "https://geodash-world-client.onrender.com"
   },
-  {
-    title: "Happy Beats",
-    description:
-      "A music player app that plays random upbeat jazz music.",
-    tags: ["React", "JavaScript"],
-    imageUrl: happybeats,
-    projectLink: ""
-  },
 ] as const;
 
 export const skillsData = [
@@ -78,4 +78,6 @@ export const skillsData = [
   "Framer Motion",
   "Figma",
   "UI/UX Design",
+  ".NET",
+  "C#",
 ] as const;
