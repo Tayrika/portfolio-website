@@ -30,13 +30,13 @@ export const projectsData = [
   {
     title: "Animal World App",
     description:
-      "Website for children to learn about animals through games and quizzes.",
+      "A website for children to learn about animals through games and quizzes.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     imageUrl: animalworld,
     projectLink: "https://v54-tier3-team-36.netlify.app/"
   },
   {
-    title: "The Animal Shelter App",
+    title: "Animal Shelter App",
     description:
       "A platform for animal shelters that allows users to browse and adopt pets.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "DaisyUI"],
@@ -44,9 +44,9 @@ export const projectsData = [
     projectLink: "https://v53-tier3-team-40.onrender.com"
   },
   {
-    title: "The Space Discovery App",
+    title: "Space Discovery App",
     description:
-      "An interactive platform that allows users to explore space through NASA's curated images, live ISS tracking, Mars Rover photos, and educational game activities.",
+      "A website to explore space through NASA's curated images, live ISS tracking, Mars Rover photos, and educational game activities.",
     tags: ["React", "Tailwind CSS", "NASA API"],
     imageUrl: spacediscovery,
     projectLink: "https://v52-tier3-team-40.onrender.com"
