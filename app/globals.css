@@ -13,3 +13,21 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+.noise-bg {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/noisy-bg-dark.png');
+  background-size: cover;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  transition: background-image 0.3s;
+}
+
+.dark .noise-bg {
+  background-image: url('/noisy-bg-dark.png');
+}
